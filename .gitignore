@@ -1,6 +1,6 @@
 # Do not version control old project code
 old_code
-frog/scraper/credentials.py
+credentials.py
 *.session
 *.session-journal
 output

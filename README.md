@@ -1,4 +1,5 @@
 # F-R-O-G Telegram scraping tool
+#### Flexible Research-Oriented Gatherer for Telegram data samples
 
 
 ## Table of contents
