@@ -1,0 +1,17 @@
+<section>
+  <button id="btn-get-channel-msgs">Show messages</button>
+  <p id="msgs-channel-info"></p>
+  <table>
+    <thead>
+      <tr>
+        <th class="table-id">ID</th>
+        <th class="table-type">Type</th>
+        <th class="table-msg">Message</th>
+        <th class="table-details">Show details</th>
+      </tr>
+    </thead>
+    <tbody id="channel-msgs-body">
+    </tbody>
+  </table>
+  <script type="module" src="{{ url_for('static', filename='channelMsgs.js') }}"></script>
+</section>

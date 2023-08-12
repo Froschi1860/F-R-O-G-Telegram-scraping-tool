@@ -1,0 +1,27 @@
+<section class="flex-column content-card">
+  <div class="clearfix">
+    <label for="cfg-force-full">Force scraping of full channel</label>
+    <input type="checkbox" id="cfg-force-full" name="cfg-force-full">
+  </div>
+  <div class="clearfix">
+    <label for="cfg-start-date">Enter start date for scraping (including given date)</label>
+    <input type="date" id="cfg-start-date" name="cfg-start-date" class="float-right">
+  </div>
+  <div class="clearfix">
+    <label for="cfg-end-date">Enter end date for scraping (excluding given date)</label>
+    <input type="date" id="cfg-end-date" name="cfg-end-date" class="float-right">
+  </div>
+  <div class="clearfix">
+    <label for="cfg-max-num-msgs">Enter maximum number of messages</label>
+    <input type="number" id="cfg-max-num-msgs" name="cfg-max-num-msgs" value="0" min="0" class="float-right">
+    <p>Multiple of 100</p>
+    <p>0 = Scrape whole channel</p>
+  </div>
+  <div>
+    <button id="update-cfg">Update</button>
+    <button id="defaut-cfg">Reset to default</button>
+  </div>
+  <p id="scraper-cfg-response"></p>
+  <p id="current-cfg"></p>
+  <script type="module" src="{{ url_for('static', filename='scraperConfig.js') }}"></script>
+</section>

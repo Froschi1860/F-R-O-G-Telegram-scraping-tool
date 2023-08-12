@@ -1,0 +1,15 @@
+# Application
+telethon
+pytz
+pywebview
+flask
+flask[async]
+tinydb
+tinydb-encrypted-jsonstorage
+tendo
+
+# Build
+PyInstaller
+
+# Formatting
+black

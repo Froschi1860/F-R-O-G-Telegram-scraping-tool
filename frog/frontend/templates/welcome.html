@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% block main %}
+<main>
+  <h2>Home</h2>
+  <article class="flex-row">
+    <section class="content-container-wide">
+      <h3>Welcome to the F-R-O-G Telegram scraping tool</h3>
+      <section class="content-card">
+        <h4>About</h4>
+        <p></p>
+        <h4>The extensive usage manual can be found <a href="https://github.com/Froschi1860/F-R-O-G"
+            target="_blank">here</a>.</h4>
+        <h4>Getting started</h4>
+        <p>To get started sign up on Telegram with your phone number, <a
+            href="https://core.telegram.org/api/obtaining_api_id" target="_blank">get an API ID</a> and register your
+          credentials in the Credentials section. The username is necessarybut can be chosen freely and does not have an
+          effect on the scraping process. After a set of credentials was saved it must be authorized by clicking the
+          respective button. A one-time code is sent via the Telegram app which must be entered in F-R-O-G
+          (Two-Factor-Authorization is not supported as of now). Once authorized successfully, F-R-O-G remembers this
+          state and verifies it for each saved set of credentials on startup. Multiple phone numbers can be used for
+          parallel scraping.</p>
+      </section>
+    </section>
+  </article>
+</main>
+{% endblock %}

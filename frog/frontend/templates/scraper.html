@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+{% block main %}
+<main>
+  <h2>Scraper</h2>
+  <article class="flex-row">
+    <section class="content-container">
+      <h3>Scraper configuration</h3>
+      {% include 'scraper-config.html' %}
+    </section>
+    <section class="flex-column content-container">
+      <h3>Scrape Telegram channels</h3>
+      <section class="content-card">
+        <button id="btn-get-scraper-queue-len">Show number of remaining jobs</button>
+        <button id="reset-scraper-queue">Delete remaining jobs (Does not abort running scrapers)</button>
+        <div>
+          <label for="add-ref">Enter a reference</label>
+          <input type="text" list="known-channels-ref" name="add-ref" id="add-ref">
+          <button id="add-ref-btn">Add</button>
+        </div>
+        <div>
+          <label for="channel-ref-files">Upload .txt or .csv files containing channel references</label>
+          <input type="file" accept=".txt,.csv" id="channel-ref-files" name="channel-ref-files" multiple="true">
+        </div>
+        <ul id="scrape-multi-refs" class="reference-list">
+        </ul>
+        <button id="btn-add-to-scraper-queue">Add to running scraper</button>
+        <button id="btn-start-scraper-multi">Start new scraper job</button>
+        <p id="scraper-res-multi"></p>
+      </section>
+    </section>
+    <!-- <section class="flex-column content-container">
+      <h3>Scrape one channel</h3>
+      <div>
+        <label for="inp-channel-ref">Enter a channel reference</label>
+        <input type="text" list="known-channels-ref" name="inp-channel-ref" id="inp-channel-ref">
+        <button id="btn-get-channel-meta-by-ref">Get metadata by reference</button>
+        <div id="channel-meta">
+        </div>
+      </div>
+      <div id="cfg-and-start" class="hidden">
+        <button id="btn-start-scraper-single">Start scraping</button>
+        <p id="scraper-response"></p>
+      </div>
+    </section> -->
+    <section class="content-container">
+      <h3>Active scrapers</h3>
+      {% include 'active-scrapers.html' %}
+    </section>
+  </article>
+</main>
+<script type="module" src="{{ url_for('static', filename='scraper.js') }}"></script>
+{% endblock %}

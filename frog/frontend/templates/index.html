@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>F-R-O-G</title>
+</head>
+
+<body>
+  <datalist id="known-channels-id"></datalist>
+  <datalist id="known-channels-ref"></datalist>
+  {% include "header.html" %}
+  {% if active_scrapers %}
+  <div class="active-banner flex-column">
+    <h3>Scraper is active</h3>
+    <div class="jumping-frog">
+      <img class="frog-icon" src="{{ url_for('static', filename='frog-icon.png') }}" alt="">
+    </div>
+  </div>
+  </div>
+  {% endif %}
+  {% block main %}
+  {% endblock %}
+  {% include "footer.html" %}
+  <script type="module" src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block main %}
+<main class="flex-row">
+  <section class="flex-column"></section>
+  <h3>Error on scraper startup</h3>
+  {% if invalid_phone %}
+  <p>Invalid phone number. Please double check your credentials</p>
+  <form action="/credentials" method="GET">
+    <input type="submit" value="Edit credentials">
+  </form>
+  {% elif invalid_api_id %}
+  <p>Invalid API ID or API hash. Please double check your credentials</p>
+  <form action="/credentials" method="GET">
+    <input type="submit" value="Edit credentials">
+  </form>
+  {% else %}
+  <p>Unknown error. Please refer to error log and consider reporting at GitHub.</p>
+  <form action="/" method="GET">
+    <input type="submit" value="Back to start">
+  </form>
+  {% endif %}
+</main>
+{% endblock %}

@@ -1,0 +1,20 @@
+<section class="content-card">
+  <p>Please enter a channel ID or reference to retieve metadata.</p>
+  <div class="clearfix">
+    <label for="inp-channel-id">Enter a channel ID</label>
+    <input type="number" list="known-channels-id" name="inp-channel-id" id="inp-channel-id" class="float-right">
+  </div>
+  <div class="clearfix">
+    <label for="inp-channel-ref">Enter a channel reference</label>
+    <input type="text" list="known-channels-ref" name="inp-channel-ref" id="inp-channel-ref" class="float-right">
+  </div>
+  <div>
+    <button id="btn-get-channel-meta-by-id">Get metadata by ID</button>
+    <button id="btn-get-channel-meta-by-ref">Get metadata by reference</button>
+  </div>
+  <p id="channel-meta" class="response-field"></p>
+  <div id="export-meta-section" class="hidden">
+    <button id="export-meta">Export metadata (JSON)</button>
+    <p id="export-meta-info"></p>
+  </div>
+</section>

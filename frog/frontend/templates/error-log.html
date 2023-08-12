@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+{% block main %}
+<main>
+  <h2>Error log</h2>
+  <article class="content-container-wide">
+    <h3>All saved errors</h3>
+    <section class="content-card">
+      <p>Export overwrites existing files!</p>
+      <div class="flex-row">
+        <button id="export-error-log">Export error log</button>
+        <button id="delete-error-log">Delete error log</button>
+      </div>
+      <p id="error-log-response"></p>
+      {% if exception %}
+      <p>Error when accessing the error log</p>
+      {% else %}
+      {% if errors|length == 0 %}
+      <p>No errors saved</p>
+      {% else %}
+      {% for e in errors %}
+      <div>
+        <hr>
+        <h4>{{ e["timestamp"] }}</h4>
+        <p>{{ e["type"] }}</p>
+        <p>{{ e["message"] }}</p>
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endif %}
+    </section>
+  </article>
+  <script type="module" src="{{ url_for('static', filename='errorLog.js') }}"></script>
+</main>
+{% endblock %}

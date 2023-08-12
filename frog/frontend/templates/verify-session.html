@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block main %}
+<main>
+  <section class="content-container">
+    <h2>Authorize session</h2>
+    <section class="content-card">
+      <input type="text" value="{{phone}}" id="phone" readonly>
+      <label for="verification-code">Enter the code you received on your mobile (valid for 2 minutes):</label>
+      <input type="number" name="verification-code" id="verification-code">
+      <button id="send-verification-code-btn">Send</button>
+      <p id="response"></p>
+    </section>
+  </section>
+</main>
+<script type="module" src="{{ url_for('static', filename='verifySession.js') }}"></script>
+{% endblock %}

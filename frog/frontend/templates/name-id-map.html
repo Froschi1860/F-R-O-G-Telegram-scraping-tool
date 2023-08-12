@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% block main %}
+<main>
+  <h2>Name-ID Mapper</h2>
+  <article class="flex-row">
+    <section class="flex-column content-container">
+      <h3>Find channel ID by reference</h3>
+      <section class="content-card">
+        <div class="clearfix">
+          <label for="channel-ref">Channel reference (name or link)</label>
+          <input type="text" list="known-channels-ref" name="channel-ref" id="channel-ref" class="float-right">
+        </div>
+        <button id="channel-id-lookup">Search</button>
+        <div id="channel-id-result">
+        </div>
+      </section>
+    </section>
+    <section class="flex-column content-container">
+      <h3>Find channel name by ID</h3>
+      <section class="content-card">
+        <div class="clearfix">
+          <label for="channel-id">Channel ID (positive integer)</label>
+          <input type="number" list="known-channels-id" name="channel-id" id="channel-id" class="float-right">
+        </div>
+        <button id="channel-ref-lookup">Start</button>
+        <ul id="ref-list">
+        </ul>
+      </section>
+    </section>
+  </article>
+</main>
+<script type="module" src="{{ url_for('static', filename='nameIdMap.js') }}"></script>
+{% endblock %}

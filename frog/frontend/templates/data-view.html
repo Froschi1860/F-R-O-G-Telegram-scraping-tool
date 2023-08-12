@@ -1,0 +1,65 @@
+{% extends "index.html" %}
+{% block main %}
+<main>
+  <h2>Data view</h2>
+  <article class="flex-row">
+    <section class="flex-column content-container">
+      <h3>Name-ID-Mappings</h3>
+      <section class="content-card">
+        <p>Export overwrites existing files!</p>
+        <div>
+          <label for="export-mappings-btn">Export Name-ID-mappings as CSV:</label>
+          <button id="export-mappings-btn" name="export-mappings-btn">Export</button>
+        </div>
+        <div>
+          <label for="delete-mappings-id">Delete mappings for ID:</label>
+          <input list="known-channels-id" type="text" name="delete-mappings-id" id="delete-mappings-id">
+          <button id="delete-mappings-btn">Delete mappings</button>
+        </div>
+        <p id="name-id-map-response"></p>
+      </section>
+    </section>
+    <section id="export-all-section" class="flex-column content-container">
+      <h3>Export all channels as JSON or CSV</h3>
+      <section class="content-card">
+        <p>Export overwrites existing files!</p>
+        <div>
+          <label for="export-all-include-meta">Include meta</label>
+          <input type="checkbox" id="export-all-include-meta" name="export-all-include-meta">
+          <button id="export-all-json">As JSON</button>
+          <button id="export-all-csv">As CSV</button>
+        </div>
+        <p id="export-all-info"></p>
+      </section>
+    </section>
+    <section class="flex-column content-container">
+      <h3>Metadata export</h3>
+      {% include 'meta-lookup.html' %}
+    </section>
+    <section class="flex-column content-container-wide">
+      <h3>Export, delete or show single channel</h3>
+      <section class="content-card">
+        <div class="clearfix">
+          <label for="inp-channel-id-msgs">Choose a channel</label>
+          <input id="inp-channel-id-msgs" list="known-channels-id" type="text" class="float-right">
+        </div>
+        <div id="export-msgs-section" class="">
+          <button id="export-csv">Export messages as CSV</button>
+          <button id="export-json">Export messages as JSON</button>
+          <button id="btn-delete-channel">Delete messages or channel</button>
+          <p id="export-msgs-info"></p>
+        </div>
+        {% include 'channel-msgs.html' %}
+      </section>
+    </section>
+  </article>
+  <div id="modal" class="modal clearfix">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h3 id="modal-title"></h3>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+  <script type="module" src="{{ url_for('static', filename='dataView.js') }}"></script>
+</main>
+{% endblock %}

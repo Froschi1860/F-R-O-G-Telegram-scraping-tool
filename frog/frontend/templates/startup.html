@@ -1,0 +1,8 @@
+{% extends "index.html" %}
+{% block main %}
+<main class="content-container">
+  <h2>Starting F-R-O-G...</h2>
+  <div class="loader"></div>
+</main>
+<script type="module" src="{{ url_for('static', filename='startup.js') }}"></script>
+{% endblock %}
