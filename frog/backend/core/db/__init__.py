@@ -14,7 +14,7 @@ error_db_lock = threading.Lock()
 cred_db = TinyDB(
     path=(os.path.join(db_dir, "f-r-o-g_cred.db")),
     storage=EncryptedJSONStorage,
-    encryption_key="PASSWORD",
+    encryption_key="sDFDf18f1ef16s1df1gh1zj819156r1844daf151SF41dfsFD",
 )
 cred_db_lock = threading.Lock()
 
