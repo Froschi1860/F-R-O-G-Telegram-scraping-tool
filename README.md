@@ -89,7 +89,7 @@ Errors that occur on scraping and app-internally are saved in an error log which
 Copyright (c) 2023-Present Fabian Fröschl  
 Fabian Fröschl [GitHub](https://github.com/Froschi1860)
 
-### Idea and scientific background
+### Project overview & research implementation
 Florian Primig [FH Berlin](https://www.polsoz.fu-berlin.de/en/kommwiss/arbeitsstellen/digitalisierung_partizipation/team/fprimig/index.html)
 
 ### Journal Paper about F-R-O-G
