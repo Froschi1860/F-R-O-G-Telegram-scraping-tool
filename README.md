@@ -38,6 +38,8 @@ F-R-O-G stands for Flexible Research-Oriented Gatherer for Telegram data. We hav
 ### Technologies used
 The core of F-R-O-G is written in Python and builds up on the [telethon](https://docs.telethon.dev/en/stable/) package which offers an easy to use interface to the Telegram API. To create a GUI application, the [pywebview](https://pywebview.flowrl.com/) framework was chosen to enable the usage of HTML, CSS and JavaScript for the user interface. It hosts a local webserver for which the [Flask](https://flask.palletsprojects.com/en/2.3.x/) framework was used here, as well as a Chromium-based user interface window. [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html) together with [tinydb-encrypted-jsonstorage](https://pypi.org/project/tinydb-encrypted-jsonstorage/) was used to save user and application data. Further, the [tendo](https://pypi.org/project/tendo/) package was used to add necessary functionality to Python and [PyInstaller](https://pyinstaller.org/en/stable/) was used to build a executable.
 
+### Cite as
+Fröschl, F., & Primig, F. (2023). F-R-O-G Telegram scraping tool (Version 1.0.0). https://github.com/Froschi1860/F-R-O-G-Telegram-scraping-tool/tree/main
 
 ## Getting started
 ### Register on Telegram and obtain API ID
