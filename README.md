@@ -14,7 +14,7 @@
 -  [Error Logging](#error-logging)
 5. [Credits](#credits)
 
-### Software presentation and software review of F-R-O-G
+### Software presentation and software review of F-R-O-G in Mobile Media & Communication
 - Link to paper coming here, soon
 
 ### Studies that used FROG (if you want your paper added here, send an e-mail to f.primig@fu-berlin.de)
