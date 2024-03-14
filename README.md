@@ -97,6 +97,9 @@ Florian Primig [FH Berlin](https://www.polsoz.fu-berlin.de/en/kommwiss/arbeitsst
 ### Journal Paper about F-R-O-G
 - Link to paper
 
+### Studies that used FROG (if you want your paper added here, send an e-mail to f.primig@fu-berlin.de)
+- Primig, F. (2024). Thinking different as an act of resistance: Reconceptualizing the German protests in the COVID-19 pandemic as an emergent counter-knowledge order. Discourse & Society, 1–18. https://doi.org/10.1177/09579265241231593
+
 ### Licence notes of packages used
 #### Telethon
 Copyright (c) 2016-Present LonamiWebs  
